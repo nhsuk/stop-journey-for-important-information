@@ -1,0 +1,65 @@
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+    v1 - Stop users in a journey to tell them important information
+{% endblock %}
+
+<!-- Phase banner inside the beforeContent block -->
+{% block beforeContent %}
+  
+  <!-- Phase banner -->
+  <div class="app-phase-banner">
+    <div class="nhsuk-width-container app-phase-banner__container">
+      <p class="app-phase-banner__content">
+        <strong class="nhsuk-tag app-phase-banner__tag">
+          Prototype
+        </strong>
+        <span class="app-phase-banner__text">
+        This is a prototype - your <a href="https://github.com/nhsuk/nhsuk-service-manual-backlog/issues/241" target="_blank">feedback</a> will help us improve it. (Link opens in new tab)
+        </span>
+      </p>
+    </div>
+  </div>
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+
+  <div class="nhsuk-grid-row">
+
+    <div class="nhsuk-grid-column-two-thirds">
+
+        <div class="app-interruption">
+            <div class="app-interruption__wrapper">
+              <div class="app-interruption__content">
+                <h1 class="app-card__heading nhsuk-heading-xl nhsuk-u-margin-bottom-4">
+                  <span class="app-interruption__caption nhsuk-caption-m nhsuk-caption--top">Track your health</span>
+                  This is a connected service
+                </h1>
+                <p>
+                  Your GP surgery has chosen this online consultation service provided by <strong>Patients know best</strong>.
+                </p>
+                <form action="#" method="post">
+                  <input type="submit" class="nhsuk-button nhsuk-button--reverse" value="Continue">
+                </form>
+                <p>
+                  <a href="#">Find out more about personal health record services</a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+      <!-- End of content -->
+
+    </div>  
+
+  </div>
+{% endblock %}

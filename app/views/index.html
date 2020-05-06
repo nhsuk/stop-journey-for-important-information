@@ -1,0 +1,65 @@
+<!-- Use this page as the index for your project -->
+
+<!-- ADDING CUSTOM CSS - Add your custom CSS or Sass in /app/assets/sass/main.scss -->
+
+<!-- Extends the layout from /views/layout.html -->
+{% extends 'layout.html' %}
+<!-- 
+  In /views/layout.html you can:
+    - change the header and footer 
+    - add custom CSS and JavaScript
+-->
+
+<!-- Set the page title inside the pageTitle block -->
+{% block pageTitle %}
+  Stop users in a journey to tell them important information
+{% endblock %}
+
+<!-- Breadcrumb goes inside the beforeContent block -->
+{% block beforeContent %}
+{% endblock %}
+
+<!-- Your page content goes inside the content block -->
+<!-- More info and code for the page layout can be found at https://service-manual.nhs.uk/design-system/styles/layout -->
+{% block content %}
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <!-- Change the page title here -->
+      <h1>
+        Stop users in a journey to tell them important information - pattern
+        <span class="nhsuk-caption-xl nhsuk-caption--bottom">Version {{version}}</span>
+      </h1>
+
+      <!-- Add your content here -->
+      <!-- Styles and components can be found at https://service-manual.nhs.uk/design-system -->
+
+      <p class="nhsuk-lede-text">
+        Use this pattern to stop users in a journey to tell them important information before continuing
+      </p>
+
+      <h2>
+        Versions
+      </h2>
+
+      <h3>
+        Current
+      </h3>
+
+      <ul>
+        <li><a href="/v2">Version 2</a> - blank example</li>
+      </ul>
+
+      <h3>
+        Previous
+      </h3>
+
+      <ul>
+        <li><a href="/v1">Version 1</a> - original example provided</li>
+      </ul>
+
+      <!-- End of content -->
+
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,87 @@
+// Import NHS.UK frontend library
+@import 'node_modules/nhsuk-frontend/packages/nhsuk';
+
+// Components that are not in the NHS.UK frontend library
+@import 'components/panel-confirmation';
+@import 'components/phase-banner';
+@import 'components/related-nav';
+@import 'components/tag';
+
+///////////////////////////////////////////
+// Add your custom CSS/Sass styles below... 
+///////////////////////////////////////////
+
+$color_app-interruption-blue: #05538e;
+.app-interruption {
+  margin-bottom: nhsuk-spacing(5) + $nhsuk-box-shadow-link; /* [1] */
+  width: 100%;
+  color: $color_nhsuk-white;
+}
+.app-interruption__wrapper {
+  background-color: $color_app-interruption-blue;
+  box-shadow: 0 $nhsuk-box-shadow-link 0 0 darken($color_app-interruption-blue, 8%); /* [2] */
+  display: block;
+  height: 100%; /* [3] */
+  position: relative; /* [4] */
+  text-decoration: none; /* [5] */
+  .nhsuk-button {
+    margin-bottom: nhsuk-spacing(4);
+  }
+  .nhsuk-back-link__link {
+    color: $color_nhsuk-white;
+  }
+  .nhsuk-icon__chevron-left {
+    fill: $color_nhsuk-white;
+  }
+  strong {
+    color: $color_nhsuk-white;
+  }
+  a {
+    color: $color_nhsuk-white;
+    &:visited {
+      color: $color_nhsuk-white;
+    }
+    &:focus {
+      color: $color_nhsuk-black;
+    }
+  }
+}
+.app-interruption__img {
+  @include print-hide();
+  border-bottom: 1px solid $color_nhsuk-grey-5; /* [8] */
+  display: block;
+  width: 100%;
+}
+.app-interruption__wrapper .app-interruption__caption {
+  color: $color_nhsuk-white;
+}
+.app-interruption__heading {
+  margin-bottom: nhsuk-spacing(3);
+}
+.app-interruption__content {
+  @include top-and-bottom();
+  @include nhsuk-responsive-padding(5);
+}
+.app-interruption__description {
+  color: $color_nhsuk-white;
+}
+
+main.nhs-app-main--interruption {
+    padding-bottom: .5em;
+  }
+  .app-interruption-header {
+    margin-bottom: -4em;
+    border-top: 8px solid $color_nhsuk-blue;
+  }
+  .app-interruption-header--alt {
+    margin-bottom: -3em;
+    border: none;
+    background-color: $color_nhsuk-blue;
+    .nhsuk-icon__close, .nhsuk-icon__chevron-left {
+      fill: $color_nhsuk-white;
+      margin-left: -8px;
+      margin-top: 8px;
+      height: 42px;
+      width: 42px;
+    }
+  }
